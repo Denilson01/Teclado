@@ -27,21 +27,28 @@ void teclado_init(void)
   
 }
 
-char tabela[2][4] = {{'1','2','3','A'},
-                    {'4','5','6','B'}};
-
+char tabela[4][4] = {{'1','2','3','A'},
+                     {'4','5','6','B'},
+                     {'7','8','9','C'}, 
+                     {'*','0','#','D'}};        
+        
+        
 char teclado_scan( void )
 {
 
     char tecla = 0;    
-    char i;
-    PORTB = 0x01;
-     for( i=0; i<4; i++ )
-    { if( PORTB & MASK<<i ) tecla = tabela [0][i]; }
+    char col, lin;
     
-    PORTB = 0x02;
-     for( i=0; i<4; i++ )
-    { if( PORTB & MASK<<i ) tecla = tabela [1][i]; }
+    
+    for( lin=0; lin<4; lin++)
+    {  
+        PORTB = 0x01<<lin; //0b00000001;
+         for( col=0; col<4; col++ )
+         {
+           if( PORTB & MASK<<col ) tecla = tabela [lin][col];   
+         } 
+    }
+
     
     return(tecla);
 }

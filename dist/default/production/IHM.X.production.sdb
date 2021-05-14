@@ -29,7 +29,7 @@
 [v _main main `(v  1 e 1 0 ]
 "22 C:\Users\20185087\MPLABXProjects\IHM.X\teclado.c
 [v _teclado_init teclado_init `(v  1 e 1 0 ]
-"33
+"36
 [v _teclado_scan teclado_scan `(uc  1 e 1 0 ]
 "228 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -58,7 +58,7 @@
 [u S54 . 1 `S49 1 . 1 0 ]
 [v _LCDbits LCDbits `VES54  1 e 1 @8 ]
 "30 C:\Users\20185087\MPLABXProjects\IHM.X\teclado.c
-[v _tabela tabela `[2][4]uc  1 e 8 0 ]
+[v _tabela tabela `[4][4]uc  1 e 16 0 ]
 "15 C:\Users\20185087\MPLABXProjects\IHM.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
@@ -68,14 +68,15 @@
 [v main@F1287 F1287 `[15]uc  1 s 15 F1287 ]
 "31
 } 0
-"33 C:\Users\20185087\MPLABXProjects\IHM.X\teclado.c
+"36 C:\Users\20185087\MPLABXProjects\IHM.X\teclado.c
 [v _teclado_scan teclado_scan `(uc  1 e 1 0 ]
 {
-"37
-[v teclado_scan@i i `uc  1 a 1 2 ]
-"36
-[v teclado_scan@tecla tecla `uc  1 a 1 1 ]
-"47
+"40
+[v teclado_scan@lin lin `uc  1 a 1 6 ]
+[v teclado_scan@col col `uc  1 a 1 5 ]
+"39
+[v teclado_scan@tecla tecla `uc  1 a 1 4 ]
+"52
 } 0
 "22
 [v _teclado_init teclado_init `(v  1 e 1 0 ]
